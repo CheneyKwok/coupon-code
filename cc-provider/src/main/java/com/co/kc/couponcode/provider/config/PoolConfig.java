@@ -18,7 +18,7 @@ public class PoolConfig {
 
     @Bean(initMethod = "init", destroyMethod = "destroy")
     public CouponCodePool couponCodePool(CouponCodeGeneratorRepository couponCodeGeneratorRepository) {
-        ICodeGen codeGen = new DefaultCodeGen(LcgFactor.PERIOD_8589934592, couponCodeGeneratorRepository);
+        ICodeGen codeGen = new DefaultCodeGen(LcgFactor.PERIOD_1073741824, couponCodeGeneratorRepository);
         return new CouponCodePool(codeGen);
     }
 }

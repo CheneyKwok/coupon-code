@@ -25,8 +25,9 @@ public class CouponCodePool implements Generator<String> {
 
     private static final Logger LOG = LoggerFactory.getLogger(CouponCodePool.class);
 
-    private static final int DEFAULT_HOT_POOL_SIZE = 100;
-    private static final int DEFAULT_COLD_POOL_SIZE = 10000;
+    private static final int DEFAULT_HOT_POOL_SIZE = 20000;
+    private static final int DEFAULT_COLD_POOL_SIZE = 50000;
+
 
     private final ExecutorService hotPoolExecutor = Executors.newSingleThreadExecutor();
     private final ExecutorService coldPoolExecutor = Executors.newSingleThreadExecutor();
